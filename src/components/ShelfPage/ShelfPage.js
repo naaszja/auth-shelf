@@ -15,8 +15,8 @@ function ShelfPage() {
   //store.rootReducer.itemReducer
 
   // *** FINISH DELETE FUNCTION ****
-  const deleteItem = () => {
-    console.log('in delete item function');
+  const deleteItem = (e) => {
+    dispatch({type: 'DELETE_ITEM', payload: e.target.value})
   }
 
   return (
@@ -29,7 +29,7 @@ function ShelfPage() {
             <p>{item.description}</p>
             <img src={item.image_url} height="200px"/>
             <br />
-            {(store.user.id === item.user_id) && (<button onClick={deleteItem}>Delete</button>)}
+            {(store.user.id === item.user_id) && (<button onClick={deleteItem} value={item.id}>Delete</button>)}
             <br />
           </div>
       ))}
