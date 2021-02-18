@@ -37,7 +37,7 @@ function ShelfInput() {
             <h1>hi</h1>
             <p><label htmlFor='descriptionInput'>Item Description:</label><input value={descriptionInput} onChange={(e) => {setDescriptionInput(e.target.value)}}/></p>
             <p><label htmlFor='imageInput'>Image URL:</label><input value={imageInput} onChange={(e) => {setImageInput(e.target.value) }}/></p>
-            <Button variant="primary" size="md" onClick={addItem}>Add Item</Button>
+            <Button variant="info" size="md" onClick={addItem}>Add Item</Button>
         </>
     );
 }
