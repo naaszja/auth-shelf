@@ -29,18 +29,17 @@ function ShelfPage() {
   return (
     <div className="container">
       <h2>Shelf</h2>
-      <Button className="shelf-btn" variant="outline-primary" onClick={() => dispatch({type: 'FETCH_ITEM', payload: store.user.id})}>My Shelf</Button>
-      <Button className="shelf-btn" variant="outline-primary" onClick={() => dispatch({type: 'FETCH_ITEM'})}>Community Shelf</Button>
+      <Button className="shelf-btn" variant="info" onClick={() => dispatch({type: 'FETCH_ITEM', payload: store.user.id})}>My Shelf</Button>
+      <Button className="shelf-btn" variant="info" onClick={() => dispatch({type: 'FETCH_ITEM'})}>Community Shelf</Button>
       <ShelfInput />
       <Container>
         <Row>
           {shelf.map(item =>
-          (<Col xl={3} lg={4} md={6}><Card className='item-card' bg="Primary" border="primary" key={item.id} style={{ width: '18rem' }}>
+          (<Col xl={3} lg={4} md={6} xs={12}><Card className='item-card' bg="info" border="primary" key={item.id} style={{ width: '18rem' }}>
             <Card.Img variant="top" src={item.image_url} height="200px" />
             <Card.Body>
               <Card.Title>{item.description}</Card.Title>
-              <Card.Text></Card.Text>
-              {(store.user.id === item.user_id) && (<Button variant="danger" onClick={deleteItem} value={item.id}>Delete</Button>)}
+              <Card.Text>{(store.user.id === item.user_id) && (<Button variant="danger" size="sm" onClick={deleteItem} value={item.id}>Delete</Button>)}</Card.Text>
             </Card.Body>
           </Card></Col>)
           )}
