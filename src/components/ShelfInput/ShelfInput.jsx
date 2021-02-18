@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ShelfInput() {
 
@@ -23,7 +25,8 @@ function ShelfInput() {
                 item_url: imageInput,
                 user_id: store.user.id, 
             }
-        })
+        });
+        
         setDescriptionInput('');
         setImageInput('');
     }
@@ -32,9 +35,9 @@ function ShelfInput() {
     return (
         <>
             <h1>hi</h1>
-            <p><label htmlFor='descriptionInput'>Item Description:</label><input onChange={(e) => {setDescriptionInput(e.target.value)}}/></p>
-            <p><label htmlFor='imageInput'>Image URL:</label><input onChange={(e) => {setImageInput(e.target.value) }}/></p>
-            <button onClick={addItem}>Add Item</button>
+            <p><label htmlFor='descriptionInput'>Item Description:</label><input value={descriptionInput} onChange={(e) => {setDescriptionInput(e.target.value)}}/></p>
+            <p><label htmlFor='imageInput'>Image URL:</label><input value={imageInput} onChange={(e) => {setImageInput(e.target.value) }}/></p>
+            <Button variant="primary" size="md" onClick={addItem}>Add Item</Button>
         </>
     );
 }

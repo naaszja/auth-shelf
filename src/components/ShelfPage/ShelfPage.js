@@ -2,6 +2,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import ShelfInput from '../ShelfInput/ShelfInput';
 
+//Bring in bootstrap components and css
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './ShelfPage.css';
+
 function ShelfPage() {
 
   const dispatch = useDispatch();
@@ -12,27 +21,31 @@ function ShelfPage() {
   const store = useSelector(store => store);
   const shelf = useSelector(store => store.itemReducer)
   console.log('should be something', shelf);
-  //store.rootReducer.itemReducer
 
-  // *** FINISH DELETE FUNCTION ****
   const deleteItem = (e) => {
-    dispatch({type: 'DELETE_ITEM', payload: e.target.value})
+    dispatch({ type: 'DELETE_ITEM', payload: e.target.value })
   }
 
   return (
     <div className="container">
       <h2>Shelf</h2>
+      <Button className="shelf-btn" variant="outline-primary" onClick={() => dispatch({type: 'FETCH_ITEM', payload: store.user.id})}>My Shelf</Button>
+      <Button className="shelf-btn" variant="outline-primary" onClick={() => dispatch({type: 'FETCH_ITEM'})}>Community Shelf</Button>
       <ShelfInput />
-      {shelf.map(item =>
-        (
-          <div key={item.id} className='items'>
-            <p>{item.description}</p>
-            <img src={item.image_url} height="200px"/>
-            <br />
-            {(store.user.id === item.user_id) && (<button onClick={deleteItem} value={item.id}>Delete</button>)}
-            <br />
-          </div>
-      ))}
+      <Container>
+        <Row>
+          {shelf.map(item =>
+          (<Col xl={3} lg={4} md={6}><Card className='item-card' bg="Primary" border="primary" key={item.id} style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={item.image_url} height="200px" />
+            <Card.Body>
+              <Card.Title>{item.description}</Card.Title>
+              <Card.Text></Card.Text>
+              {(store.user.id === item.user_id) && (<Button variant="danger" onClick={deleteItem} value={item.id}>Delete</Button>)}
+            </Card.Body>
+          </Card></Col>)
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }
