@@ -36,7 +36,7 @@ function LandingPage() {
             <em>Optional:<br/>There is an option to have only the items you have uploaded displayed
             on the screen. To enable this feature, click on the 'My Shelf' button in the upper left corner.
               To revert back click the 'Community Shelf' button.</em><br /><br />Use 
-              the input box to the right and register and have some fun! <em>(Don't 
+              the input box to register and have some fun! <em>(Don't 
                 worry we're not asking for any of your personal information or/even contact 
                 information)</em><br /><br /><br />If you're willing to give feedback, 
                 it would be greatly appreaciated<br />
