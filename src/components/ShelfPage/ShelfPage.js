@@ -36,7 +36,7 @@ function ShelfPage() {
       <Container>
         <Row>
           {shelf.map(item =>
-          (<Col xl={3} lg={4} md={6} xs={12}><Card className='item-card' bg="secondary" text="white" border="black" key={item.id} style={{ width: '18rem' }}>
+          (<Col lg={4} md={6} xs={12}><Card className='item-card' bg="secondary" text="white" border="black" key={item.id} style={{ width: '18rem' }}>
             <Card.Img variant="top" src={item.image_url} height="200px" />
             <Card.Body>
               <Card.Title>{item.description}</Card.Title>
