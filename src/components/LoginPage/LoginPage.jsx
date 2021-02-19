@@ -12,7 +12,7 @@ function LoginPage() {
       <LoginForm />
 
       <center>
-        <Button variant="outline-primary"
+        <Button variant="info"
           type="button"
           className="btn btn_asLink"
           onClick={() => {
