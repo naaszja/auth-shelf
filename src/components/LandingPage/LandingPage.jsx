@@ -33,7 +33,7 @@ function LandingPage() {
 
             Quickstart: <br /> <br />1) Register <em>(if already registered, login)</em> <br />2) Once logged in, click 'The Shelf' in the upper right corner
             <br />3) Input the images description <br />4) Input image URL and submit!<br /><br />
-            <em>Optional: There is an option to have only the items you have uploaded displayed
+            <em>Optional:<br/>There is an option to have only the items you have uploaded displayed
             on the screen. To enable this feature, click on the 'My Shelf' button in the upper left corner.
               To revert back click the 'Community Shelf' button.</em><br /><br />Use 
               the input box to the right and register and have some fun! <em>(Don't 
