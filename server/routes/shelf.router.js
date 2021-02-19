@@ -9,7 +9,7 @@ const {
  * Get all of the items on the shelf
  */
 router.get('/',rejectUnauthenticated, (req, res) => {
-    let queryText = `SELECT * FROM item`;
+    let queryText = `SELECT * FROM item ORDER BY description ASC`;
     pool.query(queryText)
       .then((result) => {
         res.send(result.rows);
