@@ -9,7 +9,7 @@ const {
  * Get all of the items on the shelf
  */
 router.get('/',rejectUnauthenticated, (req, res) => {
-    let queryText = `SELECT * FROM item ORDER BY description ASC`;
+    let queryText = `SELECT * FROM item ORDER BY id ASC;`;
     pool.query(queryText)
       .then((result) => {
         res.send(result.rows);
@@ -70,7 +70,7 @@ router.get('/count', (req, res) => {
  */
 router.get('/:id', (req, res) => {
   console.log('getting items entered by user:', req.params.id);
-  let queryText = `SELECT * FROM item WHERE user_id = $1`;
+  let queryText = `SELECT * FROM item WHERE user_id = $1 ORDER BY description ASC;`;
   pool.query(queryText,[req.params.id])
     .then((result) => {
       res.send(result.rows);
