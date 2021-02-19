@@ -9,6 +9,7 @@ function UserPage() {
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
+      <h4> <em>(Click the link to 'The Shelf' up there to get started!)</em> </h4>
       <LogOutButton className="btn" />
     </div>
   );
