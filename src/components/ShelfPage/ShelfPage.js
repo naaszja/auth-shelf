@@ -27,8 +27,9 @@ function ShelfPage() {
   }
 
   return (
+    <div class='centering-div'>
     <div className="container">
-      <h2>Shelf</h2>
+      <h1 id='main-h1'>Community Picture Shelf</h1>
       <Button className="shelf-btn" variant="info" onClick={() => dispatch({type: 'FETCH_ITEM', payload: store.user.id})}>My Shelf</Button>
       <Button className="shelf-btn" variant="info" onClick={() => dispatch({type: 'FETCH_ITEM'})}>Community Shelf</Button>
       <ShelfInput />
@@ -45,6 +46,7 @@ function ShelfPage() {
           )}
         </Row>
       </Container>
+    </div>
     </div>
   );
 }

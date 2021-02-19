@@ -6,3 +6,12 @@
 .shelf-btn {
     margin-right: 5px;
 }
+
+#main-h1 {
+    text-decoration: underline;
+    padding-bottom: 3%;
+}
+
+.centering-div {
+    text-align: center;
+}
