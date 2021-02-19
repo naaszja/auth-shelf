@@ -59,7 +59,7 @@ function LoginForm() {
         </label>
       </div>
       <div>
-        <Button variant="secondary" className="btn" type="submit" name="submit" value="Log In">Submit</Button>      </div>
+        <Button variant="outline-info" className="btn" type="submit" name="submit" value="Log In">Submit</Button>      </div>
     </form>
   );
 }
