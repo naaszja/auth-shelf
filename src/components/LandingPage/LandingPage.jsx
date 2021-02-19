@@ -21,36 +21,31 @@ function LandingPage() {
 
       <div className="grid">
         <div className="grid-col grid-col_8">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            id felis metus. Vestibulum et pulvinar tortor. Morbi pharetra lacus
-            ut ex molestie blandit. Etiam et turpis sit amet risus mollis
-            interdum. Suspendisse et justo vitae metus bibendum fringilla sed
-            sed justo. Aliquam sollicitudin dapibus lectus, vitae consequat odio
-            elementum eget. Praesent efficitur eros vitae nunc interdum, eu
-            interdum justo facilisis. Sed pulvinar nulla ac dignissim efficitur.
-            Quisque eget eros metus. Vestibulum bibendum fringilla nibh a
-            luctus. Duis a sapien metus.
-          </p>
+          <p> <br />
+            Thanks for coming. Let me tell you about what brings us together! This was an assignment meant to
+            teach us about authorization i.e. logins. No login = no access. We're super happy with how this turned
+            out and we're 100% sure there is no way this could break or behave unexpectedley. This is the first
+            time we've built an app like this so please check it out!<br /><br />
+            Once you've registered, you'll be able to upload a photo to the shelf with a description. Let's
+            keep this G rated as everyone that is registered will be able to see everyone else's images. You will
+            have the option to delete anything that you have uploaded at any time. If you own the image, the
+            'delete' button will be visible. <br /> <br />
 
-          <p>
-            Praesent consectetur orci dui, id elementum eros facilisis id. Sed
-            id dolor in augue porttitor faucibus eget sit amet ante. Nunc
-            consectetur placerat pharetra. Aenean gravida ex ut erat commodo, ut
-            finibus metus facilisis. Nullam eget lectus non urna rhoncus
-            accumsan quis id massa. Curabitur sit amet dolor nisl. Proin
-            euismod, augue at condimentum rhoncus, massa lorem semper lacus, sed
-            lobortis augue mi vel felis. Duis ultrices sapien at est convallis
-            congue.
-          </p>
+            Quickstart: <br/> <br/>1) Register <em>(if already registered, login)</em> <br/>2) Once logged in, click 'The Shelf' in the upper right corner
+            <br/>3) Input the images description <br/>4) Input image URL and submit!<br/><br/>
+            <em>Optional: There is an option to have only the items you have uploaded displayed
+              on the screen. To enable this feature, click on the 'My Shelf' button in the upper left corner.
+              To revert back click the 'Community Shelf' button.</em>            
+            
+            <br/><br/>
+            
+            <br /><br />If you're willing to give feedback, it would be greatly appreaciated<br />
+            <em><a href="mailto:naaszja@gmail.com">Naaszja@gmail.com</a></em>.<br /><br />
+            Use the input box to the right and register and have some fun!<br /><br />
 
-          <p>
-            Fusce porta diam ac tortor elementum, ut imperdiet metus volutpat.
-            Suspendisse posuere dapibus maximus. Aliquam vitae felis libero. In
-            vehicula sapien at semper ultrices. Vivamus sed feugiat libero. Sed
-            sagittis neque id diam euismod, ut egestas felis ultricies. Nullam
-            non fermentum mauris. Sed in enim ac turpis faucibus pretium in sit
-            amet nisi.
+            <em> (Don't worry we're not asking for any of your person information or contact information) </em>
+
+
           </p>
         </div>
         <div className="grid-col grid-col_4">
