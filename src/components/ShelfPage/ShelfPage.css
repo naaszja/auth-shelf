@@ -15,3 +15,7 @@
 .centering-div {
     text-align: center;
 }
+
+img{
+    object-fit: contain;
+}
