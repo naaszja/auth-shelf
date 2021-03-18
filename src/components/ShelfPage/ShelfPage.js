@@ -36,8 +36,8 @@ function ShelfPage() {
       <Container>
         <Row>
           {shelf.map(item =>
-          (<Col lg={4} md={6} xs={12}><Card className='item-card' bg="secondary" text="white" border="black" key={item.id} style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={item.image_url} height="200px" width="auto" />
+          (<Col lg={4} md={6} xs={12}><Card className='item-card' bg="info" text="black" border="dark" key={item.id} style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={item.image_url} height="200px"/>
             <Card.Body>
               <Card.Title>{item.description}</Card.Title>
               <Card.Text>{(store.user.id === item.user_id) && (<Button variant="danger" size="sm" onClick={deleteItem} value={item.id}>Delete</Button>)}</Card.Text>

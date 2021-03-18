@@ -18,10 +18,9 @@ function LandingPage() {
   return (
     <div className="container">
       <h2>{heading}</h2>
-
       <div className="grid">
         <div className="row">
-          <div className="grid-col order-xs-2 order-md-1 col-md-8">
+          <div className="grid-col order-md-1 col-md-8">
             <p> <br />
             Thanks for coming. Let me tell you about what brings us together! This was an assignment meant to
             teach us about authorization i.e. logins. No login = no access. We're super happy with how this turned
@@ -47,7 +46,7 @@ function LandingPage() {
 
           </p>
           </div>
-          <div className="grid-col order-xs-1 order-md-2 col-md-4">
+          <div className="grid-col order-md-2 col-md-4">
             <RegisterForm />
 
             <center>
